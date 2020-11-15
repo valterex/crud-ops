@@ -28,6 +28,12 @@ export class TaskService {
     return this.http.get<Task>(url).pipe(catchError(this.handleError<Task>()));
   }
 
+  addTask(task: Task): Observable<Task> {
+    return this.http
+      .post<Task>(this.TASKS_URL, task, this.httpOptions)
+      .pipe(catchError(this.handleError<Task>()));
+  }
+
   updateTask(task: Task): Observable<any> {
     return this.http
       .put(this.TASKS_URL, task, this.httpOptions)
