@@ -1,19 +1,31 @@
-<div>
-  <input #taskTitle /><button
+<div class="task">
+  <input class="task-input-add" #taskTitle />
+  <button
+    class="task-button-add"
     (click)="addTask(taskTitle.value); taskTitle.value = ''"
   >
     add
   </button>
 </div>
 
-<ul>
-  <li *ngFor="let task of tasks">
-    <a routerLink="/detail/{{ task.id }}">
-      <span class="badge">{{ task.id }}</span> {{ task.title }}
-    </a>
+<div class="table-wrapper">
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.id }}</td>
 
-    <button class="delete" title="delete task" (click)="deleteTask(task)">
-      x
-    </button>
-  </li>
-</ul>
+      <td>
+        <a routerLink="/detail/{{ task.id }}"> {{ task.title }}</a>
+      </td>
+      <td>
+        <button class="delete" title="delete task" (click)="deleteTask(task)">
+          Remove
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

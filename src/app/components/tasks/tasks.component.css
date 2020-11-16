@@ -1,0 +1,42 @@
+a {
+  text-decoration: none;
+  color: #34626c;
+}
+
+button {
+  color: #34626c;
+}
+
+.table-wrapper {
+  justify-content: center;
+  display: flex;
+  margin-top: 40px;
+}
+
+table.table {
+  width: 50%;
+  font-weight: 500;
+  background-color: #c6b497;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: #34626c;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 0.25em;
+}
+
+.task {
+  margin-top: 20px;
+}
+
+.task-input-add {
+  width: 400px;
+}
+
+.task-button-add {
+  height: 42px;
+}
