@@ -1,7 +1,7 @@
-<div class="task">
-  <input class="task-input-add" #taskTitle />
+<div class="tasks">
+  <input class="tasks-input-add" #taskTitle />
   <button
-    class="task-button-add"
+    class="tasks-button-add"
     (click)="addTask(taskTitle.value); taskTitle.value = ''"
   >
     add
@@ -19,7 +19,7 @@
       <td>{{ task.id }}</td>
 
       <td>
-        <a routerLink="/detail/{{ task.id }}"> {{ task.title }}</a>
+        <a routerLink="/todos/{{ task.id }}"> {{ task.title }}</a>
       </td>
       <td>
         <button class="delete" title="delete task" (click)="deleteTask(task)">

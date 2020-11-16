@@ -29,14 +29,15 @@ table.table {
   padding: 0.25em;
 }
 
-.task {
+.tasks {
   margin-top: 20px;
+  text-align: center;
 }
 
-.task-input-add {
+.tasks-input-add {
   width: 400px;
 }
 
-.task-button-add {
+.tasks-button-add {
   height: 42px;
 }
