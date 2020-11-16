@@ -1,0 +1,15 @@
+<div class="task" *ngIf="task">
+  <h2>{{ task.title }}</h2>
+
+  <div>
+    <label
+      >Title:
+      <input [(ngModel)]="task.title" placeholder="title" />
+    </label>
+  </div>
+
+  <div class="task-actions">
+    <button (click)="save()">save</button>
+    <button (click)="goBack()">go back</button>
+  </div>
+</div>
