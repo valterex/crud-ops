@@ -117,8 +117,13 @@
               "devServerTarget": "ng-crud-fake-api:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-crud-fake-api"
 }
