@@ -1,17 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
-// routing
 import { AppRoutingModule } from './app-routing.module';
-
-// components
 import { AppComponent } from './app.component';
-
-// services
+import { TasksComponent } from './components/tasks/tasks.component';
+import { TaskComponent } from './components/task/task.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TasksComponent, TaskComponent, DashboardComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
