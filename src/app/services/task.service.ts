@@ -17,10 +17,9 @@ export class TaskService {
   constructor(private http: HttpClient) {}
 
   getTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.TASKS_URL).pipe(
-      tap((_) => console.log('fetched tasks')),
-      catchError(this.handleError<Task[]>([]))
-    );
+    return this.http
+      .get<Task[]>(this.TASKS_URL)
+      .pipe(catchError(this.handleError<Task[]>([])));
   }
 
   getTask(id: number): Observable<Task> {
@@ -35,8 +34,10 @@ export class TaskService {
   }
 
   updateTask(task: Task): Observable<any> {
+    const url = `${this.TASKS_URL}/${task.id}`;
+
     return this.http
-      .put(this.TASKS_URL, task, this.httpOptions)
+      .patch(url, task, this.httpOptions)
       .pipe(catchError(this.handleError<any>('update task')));
   }
 
